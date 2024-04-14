@@ -17,7 +17,7 @@ export default function TodoList() {
   }
 
   useEffect(() => {
-    const sub = client.models.Todo.observeQuery().subscribe(({ items }) =>
+    const sub = client.models.Todo.observeQuery().subscribe(({ items }: any) =>
      setTodos([...items])
     );
   
@@ -43,7 +43,7 @@ export default function TodoList() {
       }}>Create </button>
 
       <ul>
-        {todos.map((todo) => (
+        {todos.map((todo: any) => (
           <li key={todo.id}>{todo.content}</li>
         ))}
       </ul>
