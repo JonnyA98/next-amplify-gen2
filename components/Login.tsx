@@ -1,17 +1,20 @@
 "use client";
+import { Authenticator } from "@aws-amplify/ui-react";
 
-import { withAuthenticator } from "@aws-amplify/ui-react";
-import { AuthUser } from "aws-amplify/auth";
-import { redirect } from "next/navigation";
-import { useEffect } from "react";
-
-function Login({ user }: { user?: AuthUser }) {
-  useEffect(() => {
-    if (user) {
-      redirect("/");
-    }
-  }, [user]);
-  return null;
-}
-
-export default withAuthenticator(Login);
+const formFields = {
+    signIn: {
+      username: {
+        placeholder: 'Enter Your Email Here',
+        isRequired: true,
+        label: 'Email:'
+      },
+    },
+  }
+  
+  export default function App() {
+    return (
+      <Authenticator formFields={formFields}>
+        {({ signOut }) => <button onClick={signOut}>Sign out</button>}
+      </Authenticator>
+    );
+  }

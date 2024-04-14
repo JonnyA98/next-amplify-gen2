@@ -6,15 +6,6 @@ export const auth = defineAuth({
       verificationEmailSubject: "Welcome to Prep Flavour! Please Verify Your Email!"
     },
   },
-  userAttributes: {
-    phoneNumber: {
-      required: true,
-      mutable: false,
-    },
-    address: {
-      required: true,
-      mutable: false,
-    },
-  },
+
 
 });
