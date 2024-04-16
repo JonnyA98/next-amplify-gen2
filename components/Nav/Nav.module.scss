@@ -1,0 +1,44 @@
+@use "../../styles/partials/variabls" as *;
+@use "../../styles/partials/mixins" as *;
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  button {
+    border: none;
+  }
+  &__menu {
+    @include desktop {
+      display: none;
+    }
+  }
+
+  &__logo {
+    margin-top: 40px;
+    display: flex;
+    position: relative;
+    left: 15px;
+  }
+
+  &__links {
+    display: none;
+    @include desktop {
+      display: flex;
+      list-style: none;
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    margin: 0 10px;
+  }
+  &__login {
+    background-color: $prep-flavor-2;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin: 1rem;
+    font-size: 12px;
+  }
+}

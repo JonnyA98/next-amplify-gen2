@@ -1,0 +1,7 @@
+@use "./mixins" as *;
+@use "./variabls" as *;
+
+@font-face {
+  font-family: "Apercu";
+  src: url("../../../public/fonts/apercu_regular_pro.otf");
+}
