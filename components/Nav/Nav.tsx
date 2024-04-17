@@ -5,6 +5,8 @@ import Logo from "../../public/logo.svg"
 import BurgerMenu from "../BurgerMenu/BurgerMenu"
 import styles from "./Nav.module.scss"
 import { usePathname } from 'next/navigation';
+import Discount from "../Discount/Discount";
+import Stars from "../Stars/Stars";
 
 const Nav = () => {
 
@@ -15,6 +17,7 @@ const Nav = () => {
     }
 
     return(
+        <>
         <nav className={styles.nav}>
             <div className={styles.nav__menu}>
                 <BurgerMenu/>
@@ -40,6 +43,9 @@ const Nav = () => {
                 <Link href="/login"> Log in </Link>
                 </div>
         </nav>
+        <Discount/>
+        <Stars/>
+        </>
     )
 }
 

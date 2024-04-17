@@ -1,0 +1,17 @@
+@use "../../styles/partials/variabls" as *;
+@use "../../styles/partials/mixins" as *;
+
+.stars {
+  &__text {
+    font-style: italic;
+    text-align: center;
+    font-weight: 300;
+    color: $prep-flavor-2;
+    font-size: 10px;
+  }
+  &__stars {
+    color: $prep-flavor-2;
+    text-align: center;
+    font-size: 10px;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../styles/partials/variabls" as *;
+@use "../../styles/partials/mixins" as *;
+
+.discount {
+  background-color: $prep-flavor-2;
+  color: white;
+  &__offer {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
