@@ -1,0 +1,25 @@
+@use "../../styles/partials/variabls" as *;
+@use "../../styles/partials/mixins" as *;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__heading {
+    text-align: center;
+    color: $prep-flavor-2;
+    line-height: 20px;
+    padding-top: 40px;
+  }
+  &__copy {
+    text-align: center;
+    color: $prep-flavor-2;
+    width: 85%;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+  &__discount {
+    font-weight: 700;
+  }
+}

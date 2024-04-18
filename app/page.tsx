@@ -2,6 +2,7 @@
 import { revalidatePath } from "next/cache";
 import { AuthGetCurrentUserServer, cookiesClient } from "@/utils/amplify-utils";
 import Logout from "@/components/Logout";
+import Hero from "@/components/Hero/Hero";
 
 
 async function App() {
@@ -31,7 +32,7 @@ async function App() {
 
   }else {
     return(<> 
-    <div>Please Log in</div></>)
+    <Hero/></>)
   }
 
 }

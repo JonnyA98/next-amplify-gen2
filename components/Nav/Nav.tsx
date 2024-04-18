@@ -7,6 +7,7 @@ import styles from "./Nav.module.scss"
 import { usePathname } from 'next/navigation';
 import Discount from "../Discount/Discount";
 import Stars from "../Stars/Stars";
+import LinkButton from "../LinkButton/LinkButton";
 
 const Nav = () => {
 
@@ -39,9 +40,7 @@ const Nav = () => {
                 <li className={styles.nav__link}><Link href="/blogs">Blogs</Link></li>
 
             </ul>
-            <div className={styles.nav__login}>
-                <Link href="/login"> Log in </Link>
-                </div>
+            <LinkButton url="./login" text="Log in"/>
         </nav>
         <Discount/>
         <Stars/>
