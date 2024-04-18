@@ -5,21 +5,66 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  @include desktop {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include desktop {
+      width: 30%;
+      margin-left: 80px;
+    }
+  }
   &__heading {
     text-align: center;
     color: $prep-flavor-2;
     line-height: 20px;
     padding-top: 40px;
+    @include desktop {
+      text-align: left;
+      line-height: 40px;
+    }
   }
+
+  &__br1 {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__br2 {
+    @include desktop {
+      display: none;
+    }
+  }
+
   &__copy {
     text-align: center;
+    margin: 0 auto;
     color: $prep-flavor-2;
     width: 85%;
     font-size: 12px;
     padding-top: 20px;
     padding-bottom: 10px;
+    @include desktop {
+      text-align: left;
+      width: 55%;
+      margin: 0;
+    }
   }
   &__discount {
     font-weight: 700;
+  }
+
+  img {
+    @include desktop {
+      max-width: 600px;
+    }
   }
 }

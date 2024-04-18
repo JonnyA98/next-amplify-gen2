@@ -11,7 +11,7 @@ interface LinkButton{
 
 const LinkButton = ({text, url} : LinkButton) => {
 
-    return(<Link href={url}><div className={styles.linkbutton}>{text}</div></Link>)
+    return(<div className={styles.linkbutton}><Link href={url}>{text}</Link></div>)
 }
 
 export default LinkButton
