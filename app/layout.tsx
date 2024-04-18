@@ -3,7 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav/Nav";
-import App from "@/components/Login";
+import Footer from "@/components/Footer/Footer";
+
 
 
 import ConfigureAmplifyClientSide from "@/components/ConfigureAmplify";
@@ -24,6 +25,7 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
         <ConfigureAmplifyClientSide />
         <Nav/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

@@ -1,0 +1,21 @@
+@use "../../styles/partials/variabls" as *;
+@use "../../styles/partials/mixins" as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: $prep-flavor-2;
+  img {
+    filter: brightness(0) invert(1);
+  }
+  &__text {
+    width: 80%;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+    bottom: 40px;
+  }
+}
